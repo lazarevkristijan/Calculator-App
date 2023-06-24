@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 4.5%;
+  margin-bottom: 2%;
+  color: black;
+  font-family: "Raleway";
+}
+
+#calc {
+  display: flex;
+  justify-content: center;
+}
+
+.calc-back-panel {
+  width: 30em;
+  height: 30em;
+  background-color: lightseagreen;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main buttons */
+.calc-main-content {
+  display: table-row;
+  justify-content: center;
+}
+
+.calc-main-content button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 0.35em;
+  font-size: 1.2em;
+  margin: 0.1em 0.02em;
+  width: 4em;
+  height: 3.5em;
+}
+
+.calc-main-content #clear {
+  background-color: rgb(180, 250, 180);
+}
+
+/* INPUT BUTTON */
+.calc-main-content input {
+  font-family: "Montserrat", sans-serif;
+  border: 3px solid black;
+  border-radius: 0.35em;
+  margin-bottom: 0.2em;
+  font-size: 1.2em;
+  background-color: rgb(200, 250, 200);
+  width: 12.6em;
+  height: 3.5em;
+  padding-left: 7%;
+  outline: none;
+}
+
+.calc-main-content input::placeholder {
+  color: black;
+  font-weight: 700;
+}
+
+/* LINKEDIN & DARK MODE */
+.calc-addons button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  background-color: rgb(167, 203, 249);
+  color: black;
+  border: 3px solid black;
+  border-radius: 0.35em;
+  font-size: 0.9em;
+  margin: 0.1em auto;
+  width: 8.5em;
+  height: 2.5em;
+}
+
+.calc-addons #calc-linkedin {
+  width: 7.5em;
+}
+
+/* HOVER & ACTIVE TRANSITIONS */
+.calc-main-content button:hover {
+  background-color: #d7fffe;
+  transition: ease-out 0.175s;
+  cursor: pointer;
+}
+
+.calc-main-content button:active {
+  background-color: rgb(177, 254, 252);
+  transition: ease-out 0.175s;
+}
+
+.calc-main-content #clear:hover {
+  background-color: rgb(150, 250, 150);
+  transition: ease-out 0.175s;
+}
+
+.calc-main-content #clear:active {
+  transition: ease-out 0.175s;
+  background-color: rgb(125, 250, 125);
+}
+
+.calc-main-content input:hover {
+  background-color: rgb(170, 250, 170);
+  transition: ease-out 0.175s;
+}
+
+.calc-addons button:hover {
+  background-color: rgb(149, 190, 244);
+  transition: ease-out 0.175s;
+}
+
+.calc-addons button:active {
+  background-color: rgb(141, 192, 255);
+  transition: ease-out 0.175s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button::selection,
+button a::selection,
+.calc-back-panel::selection,
+h1::selection {
+  background-color: transparent;
+}
+
+.errorMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0;
+}
+
+.errorMessage p {
+  font-family: "Montserrat";
+}
